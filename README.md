@@ -1,4 +1,4 @@
-# To-Do App
+# To-Do Application
 
 This project is a simple To-Do list application built with:
 - **Node.js** (v18)
@@ -18,8 +18,8 @@ This project is a simple To-Do list application built with:
 Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/nextjs-todo-app.git
-   cd nextjs-todo-app
+   git clone https://github.com/olowo-coder/to-do-application.git
+   cd to-do-application
    ```
 
 
@@ -47,6 +47,17 @@ Fetches the list of all To-Do tasks.
 
 ### **POST `/api/todos`**
 Creates a new task.  
+**Payload Example**:  
+```json
+{
+  "content": "Learn Docker",
+  "dueDate": "2024-12-15",
+  "status": "unfinished"
+}
+```
+
+### **PUT `/api/todos/:id`**
+Edit a new task.  
 **Payload Example**:  
 ```json
 {
