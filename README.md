@@ -12,21 +12,6 @@ This project is a simple To-Do list application built with:
 - Toggle status between Done and Unfinished
 - Server-side data fetching and file-based data storage
 
-## Directory Structure
-```plaintext
-├── app
-│   ├── api          # Backend API routes for handling CRUD operations
-│   ├── components   # Reusable React components
-│   ├── todos        # Pages for creating, editing, and managing todos
-│   └── page.tsx     # Main application entry point
-├── public           # Static assets
-├── types            # TypeScript type definitions
-├── utils            # Utility functions
-├── data             # Local storage for todos (data.json)
-├── Dockerfile       # Docker configuration
-├── package.json     # Dependencies and scripts
-└── tsconfig.json    # TypeScript configuration
-
 
 ## Running Locally
 
