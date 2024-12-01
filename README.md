@@ -15,7 +15,7 @@ This project is a simple To-Do list application built with:
 
 ## Running Locally
 
-1. Clone the repository:
+Clone the repository:
 
    ```bash
    git clone https://github.com/your-repo/nextjs-todo-app.git
