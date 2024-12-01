@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readTodos, writeTodos } from "@/utils/todos";
-import { Todo } from "@/types/todo";
+import { Todo, Status } from "@/types/todo";
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   const todos: Todo[] = await readTodos();
@@ -48,22 +48,24 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
-  const { status }: Partial<Todo> = await request.json();
-  const todos: Todo[] = await readTodos();
-  const todoIndex = todos.findIndex((task) => task.id === params.id);
+  const { id } = params;
+  const { status }: { status: Status } = await request.json();
 
-  if (todoIndex === -1) {
-    return NextResponse.json({ error: 'Todo not found' }, { status: 404 });
+  if (status && !Object.values(Status).includes(status)) {
+    return NextResponse.json({ error: 'Invalid status value' }, { status: 400 });
   }
 
-  const updatedTodo = {
-    ...todos[todoIndex],
-    status: status || todos[todoIndex].status,
-  };
+  const todos: Todo[] = await readTodos();
+  const todoIndex = todos.findIndex((todo) => todo.id === id);
 
-  todos[todoIndex] = updatedTodo;
+  if (todoIndex === -1) {
+    return NextResponse.json({ error: 'Task not found' }, { status: 404 });
+  }
+
+  todos[todoIndex].status = status || todos[todoIndex].status;
+
   await writeTodos(todos);
 
-  return NextResponse.json(updatedTodo);
+  return NextResponse.json(todos[todoIndex]);
 }
 

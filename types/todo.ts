@@ -2,5 +2,10 @@ export interface Todo {
   id: string;
   content: string;
   dueDate: string | null;
-  status: 'unfinished' | 'done'; 
+  status: Status;
+}
+
+export enum Status {
+  Unfinished = 'unfinished',
+  Done = 'done'
 }
