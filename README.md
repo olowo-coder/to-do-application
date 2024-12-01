@@ -39,7 +39,7 @@ Fetches the list of all To-Do tasks.
   {
     "id": "2",
     "content": "Build a Next.js App",
-    "dueDate": null,
+    "dueDate": "2024-12-25",
     "status": "done"
   }
 ]
