@@ -3,12 +3,18 @@
     "id": "403ec14f-71f0-4d31-8746-d179af51b3a7",
     "content": "Daily Stand up",
     "dueDate": "2024-12-02",
-    "status": "done"
+    "status": "unfinished"
   },
   {
     "id": "08a6d952-0d39-4f16-80f3-92d2d1bc0e11",
     "content": "Add Features to application",
     "dueDate": "2024-12-19",
     "status": "unfinished"
+  },
+  {
+    "id": "2a4b2066-a7c1-4cd7-8b22-33bd34384dac",
+    "content": "Dockerize the app when done",
+    "dueDate": "2024-12-02",
+    "status": "done"
   }
 ]

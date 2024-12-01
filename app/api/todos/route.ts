@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readTodos, writeTodos } from "@/utils/todos";
-import { Todo } from "@/types/todo";
+import { Todo, Status } from "@/types/todo";
 import { v4 as uuidv4 } from "uuid";
 
 // Featch all Todos
@@ -13,6 +13,10 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   const { content, dueDate, status }: Partial<Todo> = await request.json();
 
+  if (status && !Object.values(Status).includes(status as Status)) {
+    return NextResponse.json({ error: 'Invalid status value' }, { status: 400 });
+  }
+
   if (!content) {
     return NextResponse.json(
       { error: "Task content is required" },
@@ -24,7 +28,7 @@ export async function POST(request: NextRequest) {
     id: uuidv4(),
     content,
     dueDate: dueDate || null,
-    status: status || "unfinished",
+    status: status || Status.Unfinished,
   };
 
   const todos: Todo[] = await readTodos();
