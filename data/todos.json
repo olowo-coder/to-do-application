@@ -1,0 +1,14 @@
+[
+  {
+    "id": "403ec14f-71f0-4d31-8746-d179af51b3a7",
+    "content": "Daily Stand up",
+    "dueDate": "2024-12-02",
+    "status": "done"
+  },
+  {
+    "id": "08a6d952-0d39-4f16-80f3-92d2d1bc0e11",
+    "content": "Add Features to application",
+    "dueDate": "2024-12-19",
+    "status": "unfinished"
+  }
+]
