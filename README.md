@@ -14,7 +14,7 @@ This project is a simple To-Do list application built with:
 
 
 
-### Explanation of the Directories and Files:
+## Explanation of the Directories and Files:
 
 - **app**: This directory contains the main app components, including the backend API routes and frontend pages.
   - **api**: Contains the backend API routes for handling CRUD operations for the To-Do app.
@@ -112,6 +112,7 @@ You need to provide the `id` of the task in the URL.
   "message": "Task deleted successfully"
 }
 ```
+
 
 ## How to Dockerize and Run the Application
 
