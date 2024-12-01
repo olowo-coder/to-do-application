@@ -20,7 +20,7 @@ Clone the repository:
    ```bash
    git clone https://github.com/your-repo/nextjs-todo-app.git
    cd nextjs-todo-app
-
+   ```
 
 
 ## API Endpoints
@@ -43,7 +43,7 @@ Fetches the list of all To-Do tasks.
     "status": "done"
   }
 ]
-
+```
 
 ### **POST `/api/todos`**
 Creates a new task.  
@@ -54,7 +54,7 @@ Creates a new task.
   "dueDate": "2024-12-15",
   "status": "unfinished"
 }
-
+```
 
 ### **PATCH `/api/todos/:id`**
 Updates an existing To-Do task by changing its status.  
@@ -64,7 +64,7 @@ You need to provide the `id` of the task in the URL and send the new status in t
 {
   "status": "done"
 }
-
+```
 
 ### **DELETE `/api/todos/:id`**
 Deletes a To-Do task by its `id`.  
@@ -74,7 +74,7 @@ You need to provide the `id` of the task in the URL.
 {
   "message": "Task deleted successfully"
 }
-
+```
 
 ## How to Dockerize and Run the Application
 
@@ -86,17 +86,16 @@ To build the Docker image for the application, run the following command in the 
 
 ```bash
 docker build -t todo-app .
-
+```
 
 ### 2. Run the Docker Container
 
 ```bash
 docker run -p 3000:3000 todo-app
-
+```
 
 ### 3. Access the Application
 
 ```bash
 http://localhost:3000
-
-# simple-task-do
+```
