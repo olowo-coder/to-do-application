@@ -13,6 +13,32 @@ This project is a simple To-Do list application built with:
 - Server-side data fetching and file-based data storage
 
 
+
+### Explanation of the Directories and Files:
+
+- **app**: This directory contains the main app components, including the backend API routes and frontend pages.
+  - **api**: Contains the backend API routes for handling CRUD operations for the To-Do app.
+  - **todos**: Pages for managing the To-Do items, including creating and editing tasks.
+  - **page.tsx**: The main entry point for rendering the app's root page.
+
+- **public**: Stores static files like images, fonts, and other assets that are publicly accessible.
+
+- **components**: Houses reusable React components that can be shared across different pages (e.g., TodoList).
+
+- **types**: Contains TypeScript type definitions used throughout the app (e.g., `Todo` interface).
+
+- **utils**: Utility functions that help with common operations across the app, such as reading and writing to `data.json`.
+
+- **data**: A simple file used for local storage (`data.json`) to store the todos data.
+
+- **Dockerfile**: The configuration file for creating a Docker container to run the app in an isolated environment.
+
+- **package.json**: Contains the project's dependencies, scripts, and metadata.
+
+- **tsconfig.json**: The TypeScript configuration file for setting up the TypeScript compiler options.
+
+
+
 ## Running Locally
 
 Clone the repository:
