@@ -57,15 +57,15 @@ Fetches the list of all To-Do tasks.
 ```json
 [
   {
-    "id": "1",
-    "content": "Learn Docker",
-    "dueDate": "2024-12-15",
+    "id": "08a6d952-0d39-4f16-80f3-92d2d1bc0e11",
+    "content": "Add Features to application",
+    "dueDate": "2024-12-19",
     "status": "unfinished"
   },
   {
-    "id": "2",
-    "content": "Build a Next.js App",
-    "dueDate": "2024-12-25",
+    "id": "2a4b2066-a7c1-4cd7-8b22-33bd34384dac",
+    "content": "Dockerize the app when done",
+    "dueDate": "2024-12-02",
     "status": "done"
   }
 ]
